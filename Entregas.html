@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Minhas Entregas</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header>
+  <h1>📂 Minhas Entregas</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="entregas.html">Minhas Entregas</a>
+  </nav>
+</header>
+
+<main>
+  <section class="loginEntrega">
+    <h2>Painel de Entregas (Senha Necessária)</h2>
+    <form id="senhaForm">
+      <input type="password" id="senha" placeholder="Digite a senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <section class="entregaConteudo hidden">
+    <h2>Adicionar Entrega</h2>
+    <form id="entregaForm">
+      <input type="text" id="raEntrega" placeholder="RA ou Nome" required>
+      <input type="text" id="materiaEntrega" placeholder="Matéria" required>
+      <input type="file" id="arquivoEntrega" required>
+      <button type="submit">Salvar Entrega</button>
+    </form>
+
+    <h2>Buscar Entregas</h2>
+    <input type="text" id="buscarRA" placeholder="Digite RA ou Nome">
+    <ul id="listaEntregas"></ul>
+  </section>
+</main>
+</body>
+</html>

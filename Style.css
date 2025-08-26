@@ -1,0 +1,179 @@
+/* Geral */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0d0d0d, #222);
+  color: #fff;
+}
+
+header {
+  background: #111;
+  padding: 1rem 0;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #0f9;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #0f9;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #22d3ee;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Planos */
+.planos h2 {
+  color: #0f9;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,255,153,0.3);
+}
+
+.card::after {
+  content: attr(data-plan);
+  display: block;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* Formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+input, textarea {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+}
+
+button {
+  background: #0f9;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #22d3ee;
+}
+
+/* Histórico */
+.historico h2 {
+  margin-top: 30px;
+  color: #0f9;
+}
+
+.historico ul {
+  list-style: none;
+  padding: 0;
+}
+
+.historico li {
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* Entregas */
+.hidden {
+  display: none;
+}
+
+.entregaConteudo h2 {
+  margin-top: 20px;
+  color: #0f9;
+}
+
+#listaEntregas li {
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+#listaEntregas a {
+  margin-left: 10px;
+  color: #0f9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#listaEntregas a:hover {
+  color: #22d3ee;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}

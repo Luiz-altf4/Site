@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Site de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📘 Tarefas Escolares</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="entregas.html">Minhas Entregas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="planos">
+      <h2>Planos</h2>
+      <div class="cards">
+        <div class="card">3 tarefas → R$ 1</div>
+        <div class="card">6 tarefas → R$ 3</div>
+        <div class="card">9 tarefas → R$ 6</div>
+        <div class="card">Todas (mensal) → R$ 3</div>
+      </div>
+    </section>
+
+    <section class="pedido">
+      <h2>Fazer Pedido</h2>
+      <form id="pedidoForm">
+        <input type="text" id="ra" placeholder="RA ou Nome" required>
+        <input type="text" id="whatsapp" placeholder="WhatsApp (com DDD)" required>
+        <input type="text" id="materia" placeholder="Matéria" required>
+        <input type="text" id="prazo" placeholder="Prazo (ex: 30/08)" required>
+        <label>Upload da tarefa:</label>
+        <input type="file" id="arquivo" required>
+        <button type="submit">Enviar Pedido</button>
+      </form>
+    </section>
+
+    <section class="historico">
+      <h2>📜 Histórico de Pedidos</h2>
+      <ul id="historicoPedidos"></ul>
+    </section>
+  </main>
+</body>
+</html>
